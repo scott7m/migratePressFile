@@ -1,0 +1,25 @@
+{
+  "name": "migratepressfile",
+  "version": "1.0.0",
+  "description": "Migrate data from FM16 to MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scott7m/migratePressFile.git"
+  },
+  "author": "scott7m",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scott7m/migratePressFile/issues"
+  },
+  "homepage": "https://github.com/scott7m/migratePressFile#readme",
+  "dependencies": {
+    "fms-js": "^0.2.7",
+    "fs": "0.0.1-security",
+    "mysql": "^2.15.0",
+    "node-odbc": "^0.2.10"
+  }
+}
