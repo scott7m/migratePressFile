@@ -33,7 +33,7 @@ connection.query(sql, function(err, result, fields)  {
         var residential = (result[i].residential == null || result[i].residential == "" ? 0 : result[i].residential);
 
         var sql3 = "INSERT INTO address (address1, city, state, zip, country, residential) VALUES (" + 
-        "\"" + street + "\", \" " + city + "\", \"" + state + "\", \"" + zip + "\", \"" + country + "\", " + residential + ")";
+        "\"" + street + "\", \" " + city + "\", \"" + state + "\", \"" + zip.replace("\\", "") + "\", \"" + country + "\", " + residential + ")";
 
 		// console.log(sql3);
 
@@ -74,21 +74,6 @@ connection.query(sql, function(err, result, fields)  {
 
         // if (i > 3) break;
     }
+
+    connection.end();
 });
-
-
-// function writeAddress(contactId, street, city, state, zip, country) {
-// 	sql3 = "INSERT INTO address (contactId, address1, city, state, zip, country) VALUES (" + 
-// 	contactId + ", \"" + street + "\", \" " + city + "\", \"" + state + "\", \"" + zip + "\", \"" + country + "\")";
-
-// 	// console.log("Query 3: " + sql3);
-
-
-// 	connection.query(sql3, function(err, aResult) {
-// 		if (err) throw err;
-
-// 		console.log("Address added " + aResult.insertId);
-// 	});
-// }
-
-// connection.end();
